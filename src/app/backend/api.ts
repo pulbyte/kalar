@@ -1,0 +1,1 @@
+export const deepAiApiKey = "fd8954b0-8774-4d46-b21f-7ed6436ef452"

@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "frontend-ionic-angular",
+  "appId": "image.colorizer.kalar",
+  "appName": "kalar",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

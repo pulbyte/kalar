@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'capture',
+    loadChildren: () => import('./capture/capture.module').then( m => m.CapturePageModule)
+  },
 ];
 
 @NgModule({
