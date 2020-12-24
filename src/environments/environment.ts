@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   deepAiApiKey : "", // Enter the api key here or 
+  deepAiColorizerApiUrl : "https://api.deepai.org/api/colorizer"
 
 };
 

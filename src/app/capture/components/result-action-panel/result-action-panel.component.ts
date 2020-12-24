@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-result-action-panel',
+  selector: 'result-action-panel',
   templateUrl: './result-action-panel.component.html',
   styleUrls: ['./result-action-panel.component.scss'],
 })
@@ -9,6 +9,18 @@ export class ResultActionPanelComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('Hlo - action')
+  }
+  @Output('exit') exitComponent = new EventEmitter()
 
+  downloadResult(){
+
+  }
+  shareResult(){
+
+  }
+  goBack(){
+this.exitComponent.emit()
+  }
 }

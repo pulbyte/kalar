@@ -1,9 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>capture</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="camera-preview-content ">
+<div class="back-bttn">
+  <ion-back-button defaultHref="home" ></ion-back-button>
 
-<ion-content>
+</div>
+  
+
+<div class="cameraPreview" id="cameraPreview"></div>
 
 </ion-content>
+
+<ion-footer class="transparent ion-no-border" transparent >
+  <camera-action-panel 
+  (imageCaptured)="captureImage()"
+  (imageSelcted)="imageSelected($event)"
+  (flipCamera)="flipCamera()"
+   ></camera-action-panel>
+</ion-footer>

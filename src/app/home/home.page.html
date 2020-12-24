@@ -1,22 +1,23 @@
 <ion-content [fullscreen]="true">
-<div class="top">
-  <div class="deepai-attribution">
-    <span> <img src="../../assets/icons/thank-you-emoji.png" alt="">
-      <a href="https://deepai.org/"> <p>Deepai</p> </a></span>
-   
+  <div class="top">
+    <div class="deepai-attribution">
+      <img src="../../assets/icons/thank-you-emoji.png" alt="">
+      <a href="https://deepai.org/">
+        <p>Deepai</p>
+      </a>
+    </div>
+    <div class="message">
+      Colorize
+      your photos
+    </div>
   </div>
-  <div class="message">
-    Colorize
-your photos
-  </div>
-
-</div>
-
-
-<img class="blurred-bg" src="../../assets/images/blur-bg.svg" alt="">
-<div class="action-bar">
-  <p>Take a photo</p>
-  <i class="uil uil-arrow-right"></i>
-</div>
-
+  <img class="blurred-bg" src="../../assets/images/blur-bg.png" alt="">
 </ion-content>
+<ion-footer class="transparent ion-no-border" transparent>
+  <div class="action-bar pointer unselectable ion-activatable ripple-parent"
+  [routerLink]="'/capture'">
+    <p>Take a photo</p>
+    <i class="uil uil-arrow-right"></i>
+    <ion-ripple-effect></ion-ripple-effect>
+  </div>
+</ion-footer>

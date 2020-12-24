@@ -1,0 +1,48 @@
+html,
+body,
+.ion-app,
+.ion-content {
+    background-color: transparent;
+    --background: transparent;
+}
+
+.cameraPreview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    video{
+        border-radius: 18px;
+    }
+
+}
+
+.result-action-panel{
+    display: fixed;
+    bottom: 0;
+    left: 0;
+}
+.back-bttn{
+    z-index: 1;
+position: fixed;
+top: .4rem;
+left: .56rem;
+width: fit-content;
+}
+
+
+ion-back-button{
+    width: fit-content;
+    margin: 0;
+    --icon-font-size : 1.4rem;
+    --background :transparent;
+    --background-hover : var(--ion-color-step-200);
+    --border-radius : 11px;
+    $padding : .3rem;
+    --padding-start: $padding;
+    --padding-top: $padding;
+    --padding-end: $padding;
+    --padding-bottom: $padding;
+}

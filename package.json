@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
+    "@capacitor-community/camera-preview": "^1.1.3",
+    "@capacitor/android": "^2.4.5",
     "@capacitor/core": "2.4.5",
     "@ionic-native/camera-preview": "^5.30.0",
     "@ionic-native/core": "^5.0.0",
@@ -26,7 +28,6 @@
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
     "cordova-plugin-camera-preview": "^0.12.1",
-    "deepai": "^1.0.16",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

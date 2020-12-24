@@ -1,3 +1,20 @@
-<p>
-  camera-action-panel works!
-</p>
+
+<div class="container">
+  <div class="action upload-file-bttn pointer ripple-parent ion-activatable">
+    <input (change)="imageSelected($event)" type="file" accept="image/x-png,image/jpeg" class="pointer upload-file-bttn_input" type="file">
+    <i class="uil uil-image-v"></i>
+    <ion-ripple-effect></ion-ripple-effect>
+  </div>
+
+  <div class="action pointer ripple-parent ion-activatable" id="capture-bttn"
+  (click)="imageCaptured()">
+  <div class="capture-bttn_ellipse"></div>
+    <ion-ripple-effect></ion-ripple-effect>
+  </div>
+
+  <div class="action pointer ripple-parent ion-activatable"
+  (click)="flipCamera()">
+    <i class="uil uil-camera-change"></i>
+    <ion-ripple-effect></ion-ripple-effect>
+  </div>
+</div>

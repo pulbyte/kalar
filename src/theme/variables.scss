@@ -243,7 +243,9 @@
 i{
   color : var(--ion-text-color);
 }
-
+p{
+  color : var(--ion-text-color);
+}
 .unselectable {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -252,10 +254,16 @@ i{
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
 }
-
+.ripple-parent {
+  position: relative;
+  overflow: hidden;
+}
 .pointer {
   cursor: pointer;
 }
 .link {
   outline: none;
+}
+.camera-preview-content {
+  --background: transparent;
 }

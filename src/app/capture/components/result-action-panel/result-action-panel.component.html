@@ -1,3 +1,21 @@
-<p>
-  result-action-panel works!
-</p>
+
+<div class="container">
+  <div class="action upload-file-bttn pointer ripple-parent ion-activatable"
+  (click)="downloadResult()">
+  <i class="uil uil-download-alt"></i>
+    <ion-ripple-effect></ion-ripple-effect>
+  </div>
+
+  <div class="action pointer ripple-parent ion-activatable" id="capture-bttn"
+  (click)="shareResult()">
+  <i class="uil uil-share-alt"></i>
+    <ion-ripple-effect></ion-ripple-effect>
+  </div>
+
+  <div class="action pointer ripple-parent ion-activatable"
+  (click)="goBack()">
+  <i class="uil uil-times"></i>
+    <ion-ripple-effect></ion-ripple-effect>
+  </div>
+
+</div>
