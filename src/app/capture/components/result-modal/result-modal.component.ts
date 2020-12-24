@@ -1,4 +1,11 @@
 import { Component, EventEmitter,Output, Input, OnInit } from '@angular/core';
+import {
+  Plugins
+} from "@capacitor/core"
+import { ModalController } from '@ionic/angular';
+import { title } from 'process';
+
+const { Share } = Plugins
 
 @Component({
   selector: 'capture-result-modal',
@@ -7,7 +14,7 @@ import { Component, EventEmitter,Output, Input, OnInit } from '@angular/core';
 })
 export class ResultModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
   @Input('data') data;
   ngOnInit() {
     console.log('Hlo')
@@ -16,9 +23,18 @@ export class ResultModalComponent implements OnInit {
 
   @Output('exit') exitEvent = new EventEmitter
 
-  exitModal(){
-    this.exitEvent.emit()
-  }
+  async exitModal(){
 
+    this.exitEvent.emit()
+    await this.modalCtrl.dismiss();
+  }
+shareImage(){
+  Share.share({
+    title : "Colorized photo",
+    url : this.data
+  }
+   
+  )
+}
 
 }

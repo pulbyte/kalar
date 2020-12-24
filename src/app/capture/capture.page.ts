@@ -1,6 +1,6 @@
 import {
-  ResultActionPanelComponent
-} from './components/result-action-panel/result-action-panel.component';
+  ResultModalComponent
+} from './components/result-modal/result-modal.component';
 import {
   ImageColorizerService
 } from './../core/services/image-colorizer.service';
@@ -56,12 +56,15 @@ export class CapturePage implements OnInit {
     const imageUrl = `${base64PictureData}`;
     this.formData.set("image", imageUrl)
     await this.presentLoading().then(el => {
-      el.present();
-      this.ImageColorizerService.colorizeImage(this.formData).subscribe(res => {
-        console.log(res)
-        el.dismiss()
-        this.presentResultModal(res['output_url'])
-      })
+      this.presentResultModal(`https://api.deepai.org/job-view-file/dddaa450-ddf7-4d89-b1e4-af5ef39c45ec/outputs/output.jpg`) // dummy image
+
+     // el.present();
+      // this.ImageColorizerService.colorizeImage(this.formData).subscribe(res => {
+      //   console.log(res)
+      //   el.dismiss()
+        
+      //   //this.presentResultModal(res['output_url']) // 'https://api.deepai.org/job-view-file/dddaa450-ddf7-4d89-b1e4-af5ef39c45ec/outputs/output.jpg'
+      // })
     })
 
 
@@ -87,7 +90,7 @@ formData = new FormData
 
   async presentResultModal(data) {
     const modal = await this.modalController.create({
-      component: ResultActionPanelComponent,
+      component: ResultModalComponent,
       componentProps: {
         'data' : data
       }

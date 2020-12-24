@@ -1,10 +1,10 @@
 
 <div class="container">
-  <div class="action upload-file-bttn pointer ripple-parent ion-activatable"
-  (click)="downloadResult()">
-  <i class="uil uil-download-alt"></i>
-    <ion-ripple-effect></ion-ripple-effect>
-  </div>
+  <a target="_blank" [href]="image" download><div class="action upload-file-bttn pointer ripple-parent ion-activatable">
+    <i class="uil uil-download-alt"></i>
+      <ion-ripple-effect></ion-ripple-effect>
+    </div></a>
+
 
   <div class="action pointer ripple-parent ion-activatable" id="capture-bttn"
   (click)="shareResult()">

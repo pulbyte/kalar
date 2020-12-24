@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'result-action-panel',
@@ -10,14 +10,16 @@ export class ResultActionPanelComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('Hlo - action')
+
   }
   @Output('exit') exitComponent = new EventEmitter()
+  @Output('share') shareImage = new EventEmitter()
+  @Input('imageUrl') image
 
-  downloadResult(){
 
-  }
   shareResult(){
+    this.shareImage.emit()
+
 
   }
   goBack(){

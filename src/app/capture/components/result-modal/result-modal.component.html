@@ -1,7 +1,13 @@
 <ion-content>
-  <ion-back-button defaultHref="home"></ion-back-button>
-  <p>hhdhhhs</p>
+
+<div class="output-image">
   <img [src]="data" alt="">
-  <!-- <result-action-panel (exit)="exitModal()"></result-action-panel> -->
-  <p>hhdhhhs</p>
+</div>
+  
+
 </ion-content>
+
+<ion-footer class="transparent ion-no-border" transparent>
+  <result-action-panel (share)="shareImage()" [imageUrl]="data" (exit)="exitModal()"></result-action-panel>
+
+</ion-footer>
