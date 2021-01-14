@@ -2,7 +2,7 @@
   "name": "frontend-ionic-angular-kalar",
   "version": "0.0.1",
   "author": "Pulkit Saini",
-  "homepage": "https://ionicframework.com/",
+  "homepage": "https://kalar-colorize.web.app/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
